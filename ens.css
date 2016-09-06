@@ -1,0 +1,182 @@
+h1 {
+	font-size: 48pt;
+}
+
+.slide {
+	width: 900px;
+	height: 700px;
+	padding: 40px 60px;
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+	background-color: white;
+}
+
+.step {
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 2em;
+    letter-spacing: -1px;
+}
+
+.step pre {
+	font-size: 20px;
+	line-height: 1.1em;
+}
+
+.component {
+	width: 700px;
+	height: 700px;
+	padding: 40px 60px;
+	border: 5px solid rgba(0, 0, 0, .3);
+	border-radius: 30px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .102);
+	z-index: 0;
+	background-color: white;
+}
+
+.multi {
+	padding: 10px 40px 60px 30px;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+.multi:before {
+	content: " ";
+	border: 5px solid rgba(0, 0, 0, .3);
+	border-radius: 30px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .102);
+	position: absolute;
+	z-index: -1;
+	top: -30px;
+	left: -30px;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+.multi {
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+
+.slide .image {
+	text-align: center;
+}
+
+.slide .image img {
+	width: 80%;
+}
+
+.step * {
+	-webkit-transition: 1s;
+}
+
+.nodename, .header {
+	font-size: 36pt;
+}
+
+.nodehash, .nodeinfo {
+	font-size: 24pt;
+	font-family: monospace;
+}
+
+.past .nodehash.l1 {
+	-webkit-transform: translate(-50px, 0);
+}
+
+.past .nodehash.l2 {
+	-webkit-transform: translate(-100px, 0);
+}
+
+.past .nodehash.l3 {
+	-webkit-transform: translate(-150px, 0);
+}
+
+.past .nodename, .past path, #registry2 {
+	opacity: 0;
+	-webkit-transition: 1s;
+}
+
+.present#registry2, .past#registry2 {
+	opacity: 1;
+}
+
+.namehash {
+	opacity: 0;
+}
+
+.active.namehash, #namehash.future, #namehash8.past {
+	opacity: 1;
+}
+
+.background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100;
+}
+
+.label {
+	z-index 0;
+}
+
+.hash {
+	z-index: -1;
+}
+
+.label, .hash {
+	font-size: 20pt;
+	font-family: monospace;
+	display: block;
+	position: absolute;
+	background-color: white;
+	width: 200px;
+}
+
+#namehash .label, #namehash2 .label {
+	padding-left: 75px;
+	width: 125px;
+}
+
+.active .label1 {
+	-webkit-transform: translateX(390px);
+	-webkit-transition: 2sec;
+}
+
+.active .label3 {
+	-webkit-transform: translateX(-390px);
+	-webkit-transition: 2sec;
+}
+
+#namehash4.active .label1 {
+	-webkit-transform: translateY(50px);
+	-webkit-transition: 2sec;
+}
+
+#namehash4.active .label2 {
+	-webkit-transform: translateY(100px);
+	-webkit-transition: 2sec;
+}
+
+#namehash4.active .label3 {
+	-webkit-transform: translateY(150px);
+	-webkit-transition: 2sec;
+}
+
+#namehash6.active .hash, #namehash7.active .hash, #namehash8.active .hash {
+	-webkit-transform: translateY(50px);
+	-webkit-transition: 2sec;	
+}
+
+.impress-on-has #codehas, .impress-on-addr #codeaddr, .impress-on-setaddr #codesetaddr, .impress-on-register #coderegister {
+	color: black;
+}

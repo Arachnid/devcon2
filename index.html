@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ethereum Name Service</title>
+    <link rel="stylesheet" href="ens.css" >
+</head>
+<body>
+    <div id="impress">
+        <div id="title" class="step slide" data-x="0" data-y="0">
+            <h1>Ethereum Name Service</h1>
+            <h2>Nick Johnson &lt;nick@ethereum.org></h2>
+        </div>
+        <div id="intro" class="step slide" data-x="2000" data-y="0">
+            <h1>Why do we need another name service?</h1>
+            <div class="image"><img src="standards.png"></div>
+        </div>
+        <div id="features" class="step slide" data-x="4000" data-y="0">
+            <h1>What makes a good name service?</h1>
+            <ul>
+                <li>Separation of concerns</li>
+                <li>Distributed authority &amp; implementation</li>
+                <li>Forward-compatibility</li>
+                <li>Efficient on-chain resolution</li>
+            </ul>
+        </div>
+        <div id="components" class="step slide" data-x="6000" data-y="0">
+            <h1>Components of ENS</h1>
+            <svg style="position: absolute; left: 0; top: 0; width: 100%; height: 100%">
+                <defs>
+                    <marker id="arrow" markerWidth="10" markerHeight="5" refx="0" refy="2" orient="auto">
+                        <path d="M0,0 L0,4 L6,2 z" fill="#000" />
+                    </marker>
+                </defs>
+                <g>
+                    <line x1="325" y1="400" x2="350" y2="400" stroke="#000" stroke-width="3" marker-end="url(#arrow)" />
+                    <line x1="660" y1="400" x2="685" y2="400" stroke="#000" stroke-width="3" marker-end="url(#arrow)" />
+                </g>
+            </svg>
+        </div>
+        <div id="registry" class="step component" data-x="6000" data-y="0" data-scale="0.33">
+            <h1>ENS Registry</h1>
+            <svg width="700px" height="600px">
+                <g>
+                    <text x="0" y="62" class="nodename">&ltROOT></text>
+                    <text x="0" y="95" class="nodehash">0x00000000</text>
+                    <text x="50" y="162" class="nodename">eth</text>
+                    <text x="50" y="195" class="nodehash l1">0x93cdeb70</text>
+                    <text x="100" y="262" class="nodename">swarm.eth</text>
+                    <text x="100" y="295" class="nodehash l2">0x495940b6</text>
+                    <text x="100" y="362" class="nodename">wallet.eth</text>
+                    <text x="100" y="395" class="nodehash l2">0x4bcc8335</text>
+                    <text x="150" y="462" class="nodename">nick.wallet.eth</text>
+                    <text x="150" y="495" class="nodehash l3">0xefcbf86e</text>
+                    <path d="m 20,105 0,50 20,0" style="fill: none; stroke: black; stroke-width: 2" />
+                    <path d="m 70,205 0,50 20,0" style="fill: none; stroke: black; stroke-width: 2" />
+                    <path d="m 70,255 0,100 20,0" style="fill: none; stroke: black; stroke-width: 2" />
+                    <path d="m 130,405 0,50 20,0" style="fill: none; stroke: black; stroke-width: 2" />
+                </g>
+            </svg>
+        </div>
+        <div id="registry2" class="step component" data-x="6000" data-y="0" data-scale="0.33" style="background-color: transparent">
+            <h1>ENS Registry</h1>
+            <svg width="700px" height="600px">
+                <g>
+                    <text x="0" y="35" class="header">Node</text>
+                    <text x="250" y="35" class="header">Owner</text>
+                    <text x="500" y="35" class="header">Resolver</text>
+                    <text x="250" y="95" class="nodeinfo">0xcef05643</text>
+                    <text x="250" y="195" class="nodeinfo">0xdbb0ae7d</text>
+                    <text x="250" y="295" class="nodeinfo">0x09483e37</text>
+                    <text x="500" y="295" class="nodeinfo">0x3eb880c3</text>
+                    <text x="250" y="395" class="nodeinfo">0x2dcd64b0</text>
+                    <text x="500" y="395" class="nodeinfo">0xcd990dca</text>
+                    <text x="250" y="495" class="nodeinfo">0xf56dfa6e</text>
+                    <text x="500" y="495" class="nodeinfo">0xc222d0df</text>
+                </g>
+            </svg>
+        </div>
+        <div id="namehash" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label" style="left: 150px">nick.</span><span class="label" style="left: 340px">wallet.</span><span class="label" style="left: 540px">eth.</span>
+            </div>
+        </div>
+        <div id="namehash2" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label label1" style="left: 150px">nick.</span><span class="label" style="left: 340px;">wallet.</span><span class="label label3" style="left: 540px">eth.</span>
+            </div>
+        </div>
+        <div id="namehash3" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label" style="left: 150px">SHA3(eth)</span><span class="label" style="left: 340px;">SHA3(wallet)</span><span class="label" style="left: 540px">SHA3(nick)</span>
+            </div>
+        </div>
+        <div id="namehash4" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label" style="left: 150px">SHA3(eth)</span><span class="label" style="left: 340px;">SHA3(wallet)</span><span class="label" style="left: 540px">SHA3(nick)</span>
+                <span class="hash label1" style="top: 0; left: 150px">0x4f5b8127</span><span class="hash label2" style="top: 0; left: 340px;">0x46a31f1f</span><span class="hash label3" style="top: 0; left: 540px">0x5d5727cb</span>
+            </div>
+        </div>
+        <div id="namehash5" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label" style="left: 150px">SHA3(eth)</span><span class="label" style="left: 340px;">SHA3(wallet)</span><span class="label" style="left: 540px">SHA3(nick)</span>
+                <span class="hash" style="top: 50px; left: 30px; width: 300px">SHA3(0, 0x4f5b8127)</span><span class="hash" style="top: 100px; left: 340px;">0x46a31f1f</span><span class="hash" style="top: 150px; left: 540px">0x5d5727cb</span>
+            </div>
+        </div>
+        <div id="namehash6" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label" style="left: 150px">SHA3(eth)</span><span class="label" style="left: 340px;">SHA3(wallet)</span><span class="label" style="left: 540px">SHA3(nick)</span>
+                <span class="label" style="top: 50px; left: 30px; width: 300px; z-index: 2">SHA3(0, 0x4f5b8127)</span><span class="label" style="top: 100px; left: 70px; width: 500px; z-index: -1">SHA3(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 0x46a31f1f)</span><span class="label" style="top: 150px; left: 540px">0x5d5727cb</span>
+                <span class="hash" style="top: 50px; left: 150px; z-index: 1; width: 100px">0x93cdeb70</span>
+            </div>
+        </div>
+        <div id="namehash7" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label" style="left: 150px">SHA3(eth)</span><span class="label" style="left: 340px;">SHA3(wallet)</span><span class="label" style="left: 540px">SHA3(nick)</span>
+                <span class="label" style="top: 50px; left: 30px; width: 300px">SHA3(0, 0x4f5b8127)</span><span class="label" style="top: 100px; left: 70px; width: 500px; z-index: 2">SHA3(0x93cdeb70 , 0x46a31f1f)</span><span class="label" style="top: 150px; left: 270px; width: 450px; z-index: -1">SHA3(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, 0x5d5727cb)</span>
+                <span class="hash" style="top: 100px; left: 340px; z-index: 1; width: 100px">0x4bcc8335</span>
+            </div>
+        </div>
+        <div id="namehash8" class="step component namehash" data-x="6000" data-y="0" data-scale="0.33" data-rotate-y="180">
+            <h1>Namehash</h1>
+            <div style="position: relative">
+                <span class="label" style="left: 150px">SHA3(eth)</span><span class="label" style="left: 340px;">SHA3(wallet)</span><span class="label" style="left: 540px">SHA3(nick)</span>
+                <span class="label" style="top: 50px; left: 30px; width: 300px">SHA3(0, 0x4f5b8127)</span><span class="label" style="top: 100px; left: 70px; width: 500px">SHA3(0x93cdeb70 , 0x46a31f1f)</span><span class="label" style="top: 150px; left: 270px; width: 450px; z-index: 1">SHA3(0x4bcc8335 , 0x5d5727cb)</span>
+                <span class="hash" style="top: 150px; left: 540px; z-index: 0; width: 100px">0xefcbf86e</span>
+            </div>
+        </div>
+        <div id="components2" class="step" data-x="6000" data-y="0"></div>
+        <div id="resolver" class="step component multi" data-x="6340" data-y="0" data-scale="0.33">
+            <h1>Resolvers</h1>
+            <pre>
+contract SimpleResolver is owned {
+    mapping(bytes32=>address) addresses;
+
+    <span id="codehas">function has(bytes32 node, bytes32 kind)
+            constant returns(bool)
+    {
+        return kind == "addr" &amp;&amp; addresses[node] != 0; 
+    }</span>
+
+    <span id="codeaddr">function addr(bytes32 node) constant returns(address)
+    {
+        if(addresses[node] == 0)
+            throw;
+        return addresses[node];
+    }</span>
+
+    <span id="codesetaddr">function setAddr(bytes32 node, address addr) owner_only
+    {
+        addresses[node] = addr;
+    }</span>
+
+    function()
+    {
+        throw;
+    }
+}
+            </pre>
+        </div>
+        <div id="has" class="step" data-x="6340" data-y="-5" data-scale="0.15"></div>
+        <div id="addr" class="step" data-x="6340" data-y="40" data-scale="0.15"></div>
+        <div id="setaddr" class="step" data-x="6340" data-y="90" data-scale="0.15"></div>
+        <div id="components3" class="step" data-x="6000" data-y="0"></div>
+        <div id="registrar" class="step component multi" data-x="5660" data-y="0" data-scale="0.33">
+            <h1>Registrars</h1>
+            <pre>
+contract FIFSRegistrar {
+    ENS ens;
+    bytes32 rootNode
+
+    function FIFSRegistrar(ENS _ens, bytes32 _rootNode) {
+        ens = _ens;
+        rootNode = _rootNode;
+    }
+
+    <span id="coderegister">function register(bytes32 label, address newOwner) {
+        address owner = ens.owner(sha3(rootNode, label));
+        if(owner != 0 && owner != msg.sender)
+            throw;
+
+        ens.setSubnodeOwner(rootNode, label, newOwner);
+    }</span>
+}
+            </pre>
+        </div>
+        <div id="register" class="step" data-x="5660" data-y="15" data-scale="0.15"></div>
+    </div>
+    <script src="impress.js"></script>
+    <script>impress().init();</script>
+</body>
+</html>
